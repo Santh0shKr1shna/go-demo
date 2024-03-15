@@ -8,4 +8,5 @@ const (
 	ErrorExpectedNilObjectOrPointer = "expected nil object or pointer"
 	ErrorExpectedTrue = "expected true value"
 	ErrorExpectedFalse = "expected false value"
+	ErrorMismatchedErrorObject = "expected different error"
 )

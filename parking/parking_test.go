@@ -53,6 +53,37 @@ func TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot(t *testing.T) {
 	parklotTest.Occupy()
 
 	if assert.True(t, parklotTest.isVacant()) {
-		t.Error()
+		t.Error(ErrorExpectedFalse)
+	}
+}
+
+func TestShouldNotReturnErrorOnRunningOccupyOnNewObject(t *testing.T) {
+	size := 2
+
+	parklotTest, _ := NewParking(size)
+
+	err := parklotTest.Occupy()
+
+	if assert.NotNil(t, err) {
+		t.Error("Unexpected error! Err: ",err.Error())
+	}
+}
+
+func TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject(t *testing.T) {
+	size := 2
+
+	parklotTest, _ := NewParking(size)
+
+	parklotTest.Occupy()
+	parklotTest.Occupy()
+
+	err := parklotTest.Occupy()
+
+	if assert.Nil(t, err) {
+		t.Error(ErrorNilObjectReturned)
+	}
+
+	if assert.NotEqual(t, ErrorNoVacantSpots, err.Error()) {
+		t.Error(ErrorMismatchedErrorObject)
 	}
 }
