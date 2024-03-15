@@ -34,10 +34,13 @@ func TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject(t *testing.T) {
 func TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot(t *testing.T) {
 	size := 2
 
+	car1, _ := NewCar("TN02", "Girish")
+	car2, _ := NewCar("TN05", "Phani")
+
 	parklotTest, _ := NewParking(size)
 
-	parklotTest.Occupy()
-	parklotTest.Occupy()
+	parklotTest.Park(*car1)
+	parklotTest.Park(*car2)
 
 	assert.False(t, parklotTest.isVacant(), ErrorExpectedFalse)
 }
@@ -45,9 +48,11 @@ func TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot(t *testing.T) {
 func TestShouldNotReturnErrorOnRunningOccupyOnNewObject(t *testing.T) {
 	size := 2
 
+	car1, _ := NewCar("TN12", "Nandhan")
+
 	parklotTest, _ := NewParking(size)
 
-	err := parklotTest.Occupy()
+	err := parklotTest.Park(*car1)
 
 	assert.Nil(t, err, ErrorUnexpectedError)
 }
@@ -57,12 +62,75 @@ func TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject(t *testing.T) {
 
 	parklotTest, _ := NewParking(size)
 
-	parklotTest.Occupy()
-	parklotTest.Occupy()
+	car1, _ := NewCar("TN02", "Girish")
+	car2, _ := NewCar("TN05", "Phani")
+	car3, _ := NewCar("TN12", "Nandhan")
 
-	err := parklotTest.Occupy()
+	parklotTest.Park(*car1)
+	parklotTest.Park(*car2)
+
+	err := parklotTest.Park(*car3)
 
 	assert.NotNil(t, err)
 
 	assert.Equal(t, ErrorNoVacantSpots, err.Error(), ErrorUnexpectedError)
+}
+
+// TODO: contains - check both cases
+
+
+
+// TODO: Unpark - check three cases:
+// 		1) with 0 occupancy
+// 		2) without particular car in lot
+// 		3) positive flow
+
+func TestShouldReturnErrorToUnparkWith0Occupancy(t *testing.T) {
+	// Arrange
+	size := 2
+	parklotTest, _ := NewParking(size)
+	car1, _ := NewCar("TN02", "Girish")
+
+	// Act
+	err := parklotTest.UnPark(*car1)
+
+	assert.NotNil(t, err)
+	assert.Equal(t, ErrorNoCarsAreParked, err.Error())
+}
+
+func TestShouldReturnErrorAsTheParticularCarIsNotInTheLot(t *testing.T) {
+	// Arrange
+	size := 2
+	parklotTest, _ := NewParking(size)
+	car1, _ := NewCar("TN02", "Girish")
+	car2, _ := NewCar("TN05", "Phani")
+
+	parklotTest.Park(*car1)
+
+	// Act
+	err := parklotTest.UnPark(*car2)
+
+	// Assert
+	assert.NotNil(t, err)
+	assert.Equal(t, ErrorThisCarIsNotParkedHere, err.Error())
+}
+
+func TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking(t *testing.T) {
+	// Arrange
+	size := 2
+	parklotTest, _ := NewParking(size)
+	demoCar, _ := NewCar("TN02", "Girish")
+	actorCar, _ := NewCar("TN05", "Phani")
+
+	parklotTest.Park(*demoCar)
+	parklotTest.Park(*actorCar)
+
+	// Assert existence before acting
+	assert.True(t, parklotTest.Contains(*actorCar))
+
+	// Act
+	parklotTest.UnPark(*actorCar)
+
+	// Assert
+	assert.False(t, parklotTest.Contains(*actorCar))
 }
