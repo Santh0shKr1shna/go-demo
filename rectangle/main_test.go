@@ -143,6 +143,7 @@ func TestSquareAreaWithValidValues(t *testing.T) {
 	}
 }
 
+
 func TestSquarePerimeterWithValidValues(t *testing.T) {
 	side := 5
 	want := 4 * side
