@@ -9,4 +9,5 @@ const (
 	ErrorExpectedTrue = "expected true value"
 	ErrorExpectedFalse = "expected false value"
 	ErrorMismatchedErrorObject = "expected different error"
+	ErrorUnexpectedError = "unexpected error"
 )

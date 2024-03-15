@@ -11,13 +11,8 @@ func TestNewParkingCostructorWithValidValues(t *testing.T) {
 
 	parkLotTest, err := NewParking(s)
 
-	if assert.Nil(t, parkLotTest) {
-		t.Error(ErrorNilObjectReturned)
-	}
-
-	if assert.NotNil(t, err) {
-		t.Error("Unexpected error!", err.Error())
-	}
+	assert.NotNil(t, parkLotTest, ErrorNilObjectReturned)
+	assert.Nil(t, err, ErrorExpectedNilObjectOrPointer)
 }
 
 func TestNewParkingCostructorWithInvalidValues(t *testing.T) {
@@ -25,13 +20,8 @@ func TestNewParkingCostructorWithInvalidValues(t *testing.T) {
 
 	parkLotTest, err := NewParking(s)
 
-	if assert.NotNil(t, parkLotTest) {
-		t.Error(ErrorExpectedNilObjectOrPointer)
-	}
-
-	if assert.NotNil(t, err) {
-		t.Error("Unexpected error! ERR: ", err.Error())
-	}
+	assert.Nil(t, parkLotTest, ErrorExpectedNilObjectOrPointer)
+	assert.NotNil(t, err, ErrorNilObjectReturned)
 }
 
 func TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject(t *testing.T) {
@@ -39,9 +29,7 @@ func TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject(t *testing.T) {
 
 	parklottest, _ := NewParking(size)
 
-	if assert.False(t, parklottest.isVacant()) {
-		t.Error(ErrorExpectedTrue)
-	}
+	assert.True(t, parklottest.isVacant(), ErrorExpectedTrue)
 }
 
 func TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot(t *testing.T) {
@@ -52,9 +40,7 @@ func TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot(t *testing.T) {
 	parklotTest.Occupy()
 	parklotTest.Occupy()
 
-	if assert.True(t, parklotTest.isVacant()) {
-		t.Error(ErrorExpectedFalse)
-	}
+	assert.False(t, parklotTest.isVacant(), ErrorExpectedFalse)
 }
 
 func TestShouldNotReturnErrorOnRunningOccupyOnNewObject(t *testing.T) {
@@ -64,9 +50,7 @@ func TestShouldNotReturnErrorOnRunningOccupyOnNewObject(t *testing.T) {
 
 	err := parklotTest.Occupy()
 
-	if assert.NotNil(t, err) {
-		t.Error("Unexpected error! Err: ",err.Error())
-	}
+	assert.Nil(t, err, ErrorUnexpectedError)
 }
 
 func TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject(t *testing.T) {
@@ -79,11 +63,7 @@ func TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject(t *testing.T) {
 
 	err := parklotTest.Occupy()
 
-	if assert.Nil(t, err) {
-		t.Error(ErrorNilObjectReturned)
-	}
+	assert.NotNil(t, err)
 
-	if assert.NotEqual(t, ErrorNoVacantSpots, err.Error()) {
-		t.Error(ErrorMismatchedErrorObject)
-	}
+	assert.Equal(t, ErrorNoVacantSpots, err.Error(), ErrorUnexpectedError)
 }
