@@ -134,3 +134,37 @@ func TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking(t *tes
 	// Assert
 	assert.False(t, parklotTest.Contains(*actorCar))
 }
+
+func TestShouldVerifyParkingLotOwnerGetsNotified(t *testing.T) {
+	// arrange
+	size := 2
+	parklotTest, _ := NewParking(size)
+	demoCar1, _ := NewCar("TN02", "Girish")
+	demoCar2, _ := NewCar("TN05", "Phani")
+
+	owner := Owner{}
+
+	parklotTest.register(&owner)
+
+	parklotTest.Park(*demoCar1)
+	parklotTest.Park(*demoCar2)
+
+	assert.Equal(t, owner.msg, "Parking lot full")
+}
+
+func TestShouldVerifyTrafficPoliceGetsNotified(t *testing.T) {
+	// arrange
+	size := 2
+	parklotTest, _ := NewParking(size)
+	demoCar1, _ := NewCar("TN02", "Girish")
+	demoCar2, _ := NewCar("TN05", "Phani")
+
+	police := TrafficPolice{}
+
+	parklotTest.register(&police)
+
+	parklotTest.Park(*demoCar1)
+	parklotTest.Park(*demoCar2)
+
+	assert.Equal(t, police.msg, "Parking lot full")
+}

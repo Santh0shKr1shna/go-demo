@@ -2,14 +2,13 @@ package parking
 
 import (
 	"errors"
-	"fmt"
 )
 
 type ParkingLot struct {
 	capacity int
 	occupied int
 	carsParked []Car
-	observer Observer
+	observers []Observer
 }
 
 func NewParking(size int) (*ParkingLot, error) {
@@ -50,7 +49,7 @@ func (p *ParkingLot) Park(car Car) error {
 	}
 
 	if p.occupied == p.capacity {
-		p.LotIsFull()
+		p.notify()
 	}
 
 	return nil
@@ -74,14 +73,12 @@ func (p *ParkingLot) UnPark(car Car) error {
 	return nil
 }
 
-func (p *ParkingLot) LotIsFull() {
-	fmt.Print("The lot is full")
-}
-
 func (p *ParkingLot) register(o Observer) {
-	p.observer = o
+	p.observers = append(p.observers, o)
 }
 
 func (p *ParkingLot) notify() {
-	p.observer.Update()
+	for _, obs := range p.observers {
+		obs.Update()
+	}
 }

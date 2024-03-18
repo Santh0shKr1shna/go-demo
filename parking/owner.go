@@ -1,12 +1,10 @@
 // concrete observer
 package parking
 
-import "fmt"
-
 type Owner struct {
-	name string
+	msg string
 }
 
 func (own *Owner) Update() {
-	fmt.Printf("Hi %s, Parking lot full!!", own.name)
+	own.msg = "Parking lot full"
 }
