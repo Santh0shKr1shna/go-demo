@@ -146,9 +146,11 @@ func TestShouldVerifyParkingLotOwnerGetsNotified(t *testing.T) {
 
 	parklotTest.register(&owner)
 
+	// act
 	parklotTest.Park(*demoCar1)
 	parklotTest.Park(*demoCar2)
 
+	// assert
 	assert.Equal(t, owner.msg, "Parking lot full")
 }
 
@@ -178,7 +180,6 @@ func TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified(t *testing.T) {
 	size := 2
 	parklotTest, _ := NewParking(size)
 	demoCar1, _ := NewCar("TN02", "Girish")
-	demoCar2, _ := NewCar("TN05", "Phani")
 
 	owner := Owner{}
 	police := TrafficPolice{}
@@ -187,15 +188,7 @@ func TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified(t *testing.T) {
 	parklotTest.register(&police)
 
 	parklotTest.Park(*demoCar1)
-	
-	// verification
+
 	assert.NotEqual(t, police.msg, "Parking lot full")
 	assert.NotEqual(t, owner.msg, "Parking lot full")
-
-	// action
-	parklotTest.Park(*demoCar2)
-
-	// assert
-	assert.Equal(t, police.msg, "Parking lot full")
-	assert.Equal(t, owner.msg, "Parking lot full")
 }

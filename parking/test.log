@@ -1,0 +1,60 @@
+{"Time":"2024-03-18T14:39:35.409029+05:30","Action":"run","Package":"parking","Test":"TestNewUnParkingCostructorWithValidValues"}
+{"Time":"2024-03-18T14:39:35.409207+05:30","Action":"output","Package":"parking","Test":"TestNewUnParkingCostructorWithValidValues","Output":"=== RUN   TestNewUnParkingCostructorWithValidValues\n"}
+{"Time":"2024-03-18T14:39:35.409259+05:30","Action":"output","Package":"parking","Test":"TestNewUnParkingCostructorWithValidValues","Output":"--- PASS: TestNewUnParkingCostructorWithValidValues (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409283+05:30","Action":"pass","Package":"parking","Test":"TestNewUnParkingCostructorWithValidValues","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409291+05:30","Action":"run","Package":"parking","Test":"TestNewUnParkingCostructorWithInvalidValues"}
+{"Time":"2024-03-18T14:39:35.409296+05:30","Action":"output","Package":"parking","Test":"TestNewUnParkingCostructorWithInvalidValues","Output":"=== RUN   TestNewUnParkingCostructorWithInvalidValues\n"}
+{"Time":"2024-03-18T14:39:35.409318+05:30","Action":"output","Package":"parking","Test":"TestNewUnParkingCostructorWithInvalidValues","Output":"--- PASS: TestNewUnParkingCostructorWithInvalidValues (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409343+05:30","Action":"pass","Package":"parking","Test":"TestNewUnParkingCostructorWithInvalidValues","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409368+05:30","Action":"run","Package":"parking","Test":"TestNewParkingCostructorWithValidValues"}
+{"Time":"2024-03-18T14:39:35.409375+05:30","Action":"output","Package":"parking","Test":"TestNewParkingCostructorWithValidValues","Output":"=== RUN   TestNewParkingCostructorWithValidValues\n"}
+{"Time":"2024-03-18T14:39:35.40938+05:30","Action":"output","Package":"parking","Test":"TestNewParkingCostructorWithValidValues","Output":"--- PASS: TestNewParkingCostructorWithValidValues (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409387+05:30","Action":"pass","Package":"parking","Test":"TestNewParkingCostructorWithValidValues","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409391+05:30","Action":"run","Package":"parking","Test":"TestNewParkingCostructorWithInvalidValues"}
+{"Time":"2024-03-18T14:39:35.409396+05:30","Action":"output","Package":"parking","Test":"TestNewParkingCostructorWithInvalidValues","Output":"=== RUN   TestNewParkingCostructorWithInvalidValues\n"}
+{"Time":"2024-03-18T14:39:35.409404+05:30","Action":"output","Package":"parking","Test":"TestNewParkingCostructorWithInvalidValues","Output":"--- PASS: TestNewParkingCostructorWithInvalidValues (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.40941+05:30","Action":"pass","Package":"parking","Test":"TestNewParkingCostructorWithInvalidValues","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409414+05:30","Action":"run","Package":"parking","Test":"TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject"}
+{"Time":"2024-03-18T14:39:35.409419+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject","Output":"=== RUN   TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject\n"}
+{"Time":"2024-03-18T14:39:35.409437+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject","Output":"--- PASS: TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409441+05:30","Action":"pass","Package":"parking","Test":"TestShouldReturnTrueOnCallingIsVacantMethodWithNewObject","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409446+05:30","Action":"run","Package":"parking","Test":"TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot"}
+{"Time":"2024-03-18T14:39:35.40945+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot","Output":"=== RUN   TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot\n"}
+{"Time":"2024-03-18T14:39:35.409454+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot","Output":"--- PASS: TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409476+05:30","Action":"pass","Package":"parking","Test":"TestShouldReturnFalseOnCallingIsVacantWithFullyOccupiedLot","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409481+05:30","Action":"run","Package":"parking","Test":"TestShouldNotReturnErrorOnRunningOccupyOnNewObject"}
+{"Time":"2024-03-18T14:39:35.409489+05:30","Action":"output","Package":"parking","Test":"TestShouldNotReturnErrorOnRunningOccupyOnNewObject","Output":"=== RUN   TestShouldNotReturnErrorOnRunningOccupyOnNewObject\n"}
+{"Time":"2024-03-18T14:39:35.409493+05:30","Action":"output","Package":"parking","Test":"TestShouldNotReturnErrorOnRunningOccupyOnNewObject","Output":"--- PASS: TestShouldNotReturnErrorOnRunningOccupyOnNewObject (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409495+05:30","Action":"pass","Package":"parking","Test":"TestShouldNotReturnErrorOnRunningOccupyOnNewObject","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409497+05:30","Action":"run","Package":"parking","Test":"TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject"}
+{"Time":"2024-03-18T14:39:35.409498+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject","Output":"=== RUN   TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject\n"}
+{"Time":"2024-03-18T14:39:35.409501+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject","Output":"--- PASS: TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409502+05:30","Action":"pass","Package":"parking","Test":"TestShouldReturnErrorOnRunningOccupyMethodOnNonVacantObject","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409512+05:30","Action":"run","Package":"parking","Test":"TestShouldReturnErrorToUnparkWith0Occupancy"}
+{"Time":"2024-03-18T14:39:35.409514+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorToUnparkWith0Occupancy","Output":"=== RUN   TestShouldReturnErrorToUnparkWith0Occupancy\n"}
+{"Time":"2024-03-18T14:39:35.409517+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorToUnparkWith0Occupancy","Output":"--- PASS: TestShouldReturnErrorToUnparkWith0Occupancy (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409519+05:30","Action":"pass","Package":"parking","Test":"TestShouldReturnErrorToUnparkWith0Occupancy","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.40952+05:30","Action":"run","Package":"parking","Test":"TestShouldReturnErrorAsTheParticularCarIsNotInTheLot"}
+{"Time":"2024-03-18T14:39:35.409522+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorAsTheParticularCarIsNotInTheLot","Output":"=== RUN   TestShouldReturnErrorAsTheParticularCarIsNotInTheLot\n"}
+{"Time":"2024-03-18T14:39:35.409523+05:30","Action":"output","Package":"parking","Test":"TestShouldReturnErrorAsTheParticularCarIsNotInTheLot","Output":"--- PASS: TestShouldReturnErrorAsTheParticularCarIsNotInTheLot (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409525+05:30","Action":"pass","Package":"parking","Test":"TestShouldReturnErrorAsTheParticularCarIsNotInTheLot","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409526+05:30","Action":"run","Package":"parking","Test":"TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking"}
+{"Time":"2024-03-18T14:39:35.409527+05:30","Action":"output","Package":"parking","Test":"TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking","Output":"=== RUN   TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking\n"}
+{"Time":"2024-03-18T14:39:35.409529+05:30","Action":"output","Package":"parking","Test":"TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking","Output":"--- PASS: TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409533+05:30","Action":"pass","Package":"parking","Test":"TestShouldCheckTheExistenceOfCarUsingContainsBeforeAndAfterUnparking","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409537+05:30","Action":"run","Package":"parking","Test":"TestShouldVerifyParkingLotOwnerGetsNotified"}
+{"Time":"2024-03-18T14:39:35.409539+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyParkingLotOwnerGetsNotified","Output":"=== RUN   TestShouldVerifyParkingLotOwnerGetsNotified\n"}
+{"Time":"2024-03-18T14:39:35.40954+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyParkingLotOwnerGetsNotified","Output":"--- PASS: TestShouldVerifyParkingLotOwnerGetsNotified (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409546+05:30","Action":"pass","Package":"parking","Test":"TestShouldVerifyParkingLotOwnerGetsNotified","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409548+05:30","Action":"run","Package":"parking","Test":"TestShouldVerifyTrafficPoliceGetsNotified"}
+{"Time":"2024-03-18T14:39:35.40955+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyTrafficPoliceGetsNotified","Output":"=== RUN   TestShouldVerifyTrafficPoliceGetsNotified\n"}
+{"Time":"2024-03-18T14:39:35.409551+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyTrafficPoliceGetsNotified","Output":"--- PASS: TestShouldVerifyTrafficPoliceGetsNotified (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409553+05:30","Action":"pass","Package":"parking","Test":"TestShouldVerifyTrafficPoliceGetsNotified","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409554+05:30","Action":"run","Package":"parking","Test":"TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified"}
+{"Time":"2024-03-18T14:39:35.409555+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified","Output":"=== RUN   TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified\n"}
+{"Time":"2024-03-18T14:39:35.409557+05:30","Action":"output","Package":"parking","Test":"TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified","Output":"--- PASS: TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified (0.00s)\n"}
+{"Time":"2024-03-18T14:39:35.409558+05:30","Action":"pass","Package":"parking","Test":"TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified","Elapsed":0}
+{"Time":"2024-03-18T14:39:35.409559+05:30","Action":"output","Package":"parking","Output":"PASS\n"}
+{"Time":"2024-03-18T14:39:35.409573+05:30","Action":"output","Package":"parking","Output":"coverage: 97.2% of statements\n"}
+{"Time":"2024-03-18T14:39:35.409777+05:30","Action":"output","Package":"parking","Output":"ok  \tparking\t0.542s\tcoverage: 97.2% of statements\n"}
+{"Time":"2024-03-18T14:39:35.411096+05:30","Action":"pass","Package":"parking","Elapsed":0.543}
