@@ -187,6 +187,7 @@ func TestShouldVerifyBothTrafficPoliceAndOwnerAreNotified(t *testing.T) {
 	parklotTest.register(&police)
 
 	parklotTest.Park(*demoCar1)
+	
 	// verification
 	assert.NotEqual(t, police.msg, "Parking lot full")
 	assert.NotEqual(t, owner.msg, "Parking lot full")
