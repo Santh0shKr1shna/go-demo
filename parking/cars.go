@@ -7,7 +7,7 @@ type Car struct {
 	owner string
 }
 
-func NewCar (num, owner string) (*Car, error) {
+func NewCar(num, owner string) (*Car, error) {
 	if num == "" || owner == "" {
 		return nil, errors.New(ErrorEmptyStrings)
 	}
