@@ -51,9 +51,13 @@ func NewWallet(amt float64) (*Wallet, error) {
 	return &Wallet{Rupee(amt)}, nil
 }
 
-func (w Wallet) ConvertToDollars(amt float64) float64 {
-	roundup := toFixed(amt / float64(USD), 2)
-	return roundup
+func (w Wallet) ConvertRupeeToCurrency(m Money, cur string) (amt *float64, err error) {
+	if m.currrency != "INR" {
+		return nil, errors.New("entered currency is not in rupee")
+	}
+	amt = new(float64)
+	*amt = toFixed(m.value / float64(currrencyMap[cur]), 2)
+	return
 }
 
 func (w Wallet) ConvertToRupee(m Money) float64 {
